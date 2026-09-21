@@ -1,0 +1,5 @@
+Generic single-database configuration for Alembic using SQLModel + PostgreSQL.
+
+Usage:
+    alembic revision --autogenerate -m "message"
+    alembic upgrade head
