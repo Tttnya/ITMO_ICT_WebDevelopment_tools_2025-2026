@@ -45,6 +45,12 @@ nav:
       - Задача 1 — сумма чисел: lab2/task1.md
       - Задача 2 — парсинг веб-страниц: lab2/task2.md
       - Запуск: lab2/run.md
+  - ЛР3 — Docker, источники данных, очередь:
+      - Обзор: lab3/overview.md
+      - Подзадача 1 — упаковка в Docker: lab3/task1.md
+      - Подзадача 2 — вызов парсера по HTTP: lab3/task2.md
+      - Подзадача 3 — очередь Celery + Redis: lab3/task3.md
+      - Запуск: lab3/run.md
   - Практики:
       - Практика 1.1: practices/pr1.md
       - Практика 1.2: practices/pr2.md
@@ -55,7 +61,11 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span

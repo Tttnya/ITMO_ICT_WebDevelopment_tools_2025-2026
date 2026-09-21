@@ -11,3 +11,7 @@ uvicorn[standard]>=0.29.0
 requests>=2.31.0
 aiohttp>=3.9.0
 beautifulsoup4>=4.12.0
+
+# Лабораторная работа №3 (Docker, очередь задач)
+celery>=5.3.6
+redis>=5.0.1

@@ -177,3 +177,18 @@ class ExchangeRequest(ExchangeRequestDefault, table=True):
             "foreign_keys": "[ExchangeRequest.owner_id]",
         },
     )
+
+
+# ---------------------------------------------------------------------------
+# ParsedPage — результат работы парсера (лабораторная работа №3).
+# approach отражает способ вызова: "sync-service" (через HTTP-сервис парсера)
+# или "celery" (через очередь задач).
+# ---------------------------------------------------------------------------
+class ParsedPage(SQLModel, table=True):
+    __tablename__ = "parsed_page"
+
+    id: Optional[int] = Field(default=None, primary_key=True)
+    url: str
+    title: str
+    approach: str
+    created_at: datetime = Field(default_factory=datetime.utcnow)

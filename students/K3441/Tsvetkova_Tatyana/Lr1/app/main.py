@@ -6,6 +6,7 @@ from .connection import init_db
 from .exchanges.router import router as exchanges_router
 from .genres.router import router as genres_router
 from .library.router import router as library_router
+from .parsing.router import router as parsing_router
 from .users.router import router as users_router
 
 
@@ -40,3 +41,4 @@ app.include_router(books_router)
 app.include_router(genres_router)
 app.include_router(library_router)
 app.include_router(exchanges_router)
+app.include_router(parsing_router)
