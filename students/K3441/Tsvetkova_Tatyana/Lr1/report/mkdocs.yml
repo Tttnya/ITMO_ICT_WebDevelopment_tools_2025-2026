@@ -1,4 +1,4 @@
-site_name: "Bookcrossing — отчёт по ЛР1"
+site_name: "Bookcrossing — отчёты по лабораторным работам"
 site_description: "Серверное приложение на FastAPI + SQLModel + PostgreSQL + Alembic"
 site_author: "Цветкова Татьяна Александровна"
 
@@ -32,7 +32,7 @@ theme:
 
 nav:
   - Главная: index.md
-  - Отчёт:
+  - ЛР1 — Bookcrossing API:
       - Обзор проекта: report/overview.md
       - Модель данных: report/models.md
       - Подключение к БД: report/connection.md
@@ -40,6 +40,11 @@ nav:
       - Авторизация и JWT: report/auth.md
       - API-эндпоинты: report/endpoints.md
       - Запуск: report/run.md
+  - ЛР2 — Потоки, процессы, асинхронность:
+      - Обзор: lab2/overview.md
+      - Задача 1 — сумма чисел: lab2/task1.md
+      - Задача 2 — парсинг веб-страниц: lab2/task2.md
+      - Запуск: lab2/run.md
   - Практики:
       - Практика 1.1: practices/pr1.md
       - Практика 1.2: practices/pr2.md

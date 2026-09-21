@@ -3,8 +3,8 @@
 ## 1. Клонировать репозиторий
 
 ```bash
-git clone https://github.com/<username>/<repo>.git
-cd <repo>
+git clone https://github.com/Tttnya/ITMO_ICT_WebDevelopment_tools_2025-2026.git
+cd ITMO_ICT_WebDevelopment_tools_2025-2026
 ```
 
 ## 2. Виртуальное окружение
