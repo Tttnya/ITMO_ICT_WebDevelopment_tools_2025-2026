@@ -284,6 +284,26 @@
     
     
       <li class="md-tabs__item">
+        <a href="lab3/overview/" class="md-tabs__link">
+          
+  
+  
+  ЛР3 — Docker, источники данных, очередь
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="practices/pr1/" class="md-tabs__link">
           
   
@@ -459,6 +479,17 @@
     <span class="md-ellipsis">
       
         ЛР2 — Потоки, процессы, асинхронность
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ЛР3 — Docker, источники данных, очередь
       
     </span>
   </a>
@@ -945,7 +976,7 @@
   <span class="md-ellipsis">
     
   
-    Практики
+    ЛР3 — Docker, источники данных, очередь
   
 
     
@@ -958,6 +989,205 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ЛР3 — Docker, источники данных, очередь
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lab3/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Обзор
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lab3/task1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Подзадача 1 — упаковка в Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lab3/task2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Подзадача 2 — вызов парсера по HTTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lab3/task3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Подзадача 3 — очередь Celery + Redis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lab3/run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Запуск
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Практики
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1116,6 +1346,15 @@
 <li>Дополнительные эндпоинты: <code>/auth/me</code>, <code>/users/</code>, <code>/users/{id}</code>, <code>/auth/change-password</code></li>
 </ul>
 </div>
+<div class="admonition success">
+<p class="admonition-title">ЛР3 — Docker, источники данных, очередь (100%)</p>
+<ul>
+<li>FastAPI-приложение, PostgreSQL и парсер упакованы в Docker (<code>docker-compose.yml</code>, 5 сервисов)</li>
+<li>Отдельный контейнер-сервис парсера, вызываемый по HTTP из основного API (<code>/parsing/sync</code>)</li>
+<li>Парсинг через очередь задач: Celery + Redis, эндпоинты <code>/parsing/async</code> и <code>/parsing/async/{task_id}</code></li>
+<li>Общая логика парсинга переиспользуется HTTP-сервисом и Celery-воркером без дублирования кода</li>
+</ul>
+</div>
 <h2 id="_3">Навигация по отчёту<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="1-bookcrossing-api">ЛР1 — Bookcrossing API<a class="headerlink" href="#1-bookcrossing-api" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1133,6 +1372,14 @@
 <li><a href="lab2/task1/">Задача 1</a> — сумма чисел: threading vs multiprocessing vs async</li>
 <li><a href="lab2/task2/">Задача 2</a> — параллельный парсинг веб-страниц с сохранением в БД</li>
 <li><a href="lab2/run/">Запуск</a></li>
+</ul>
+<h3 id="3-docker">ЛР3 — Docker, источники данных, очередь<a class="headerlink" href="#3-docker" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="lab3/overview/">Обзор</a> — архитектура, 5 контейнеров, общая логика парсинга</li>
+<li><a href="lab3/task1/">Подзадача 1</a> — Dockerfile, docker-compose.yml, отдельный сервис-парсер</li>
+<li><a href="lab3/task2/">Подзадача 2</a> — синхронный вызов парсера по HTTP</li>
+<li><a href="lab3/task3/">Подзадача 3</a> — асинхронный вызов через очередь Celery + Redis</li>
+<li><a href="lab3/run/">Запуск</a></li>
 </ul>
 <h3 id="_4">Практики<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p><a href="practices/pr1/">1.1</a>, <a href="practices/pr2/">1.2</a>, <a href="practices/pr3/">1.3</a></p>
